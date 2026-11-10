@@ -1,0 +1,44 @@
+#[derive(Clone, Copy, Debug)]
+pub struct GetPrecomputations;
+
+#[derive(Clone, Copy, Debug, Default)]
+pub struct Options<'options> {
+    pub function_key: Option<&'options [&'options str]>,
+    pub order_by: Option<&'options str>,
+    pub results_max: Option<i64>,
+    pub start_at: Option<i64>,
+}
+
+impl crate::Operation for GetPrecomputations {
+    const BASE: crate::Base = crate::Base::Jira;
+    const IS_READ: bool = true;
+    const METHOD: crate::Method = crate::Method::Get;
+    const PATH: &'static str = "/rest/api/3/jql/function/computation";
+
+    type Options<'options> = Options<'options>;
+    type Reply = crate::Object<super::shape::PageBean2JQLFunctionPrecomputationBean>;
+
+    fn request(
+        &self,
+        options: &Self::Options<'_>,
+        request: &mut crate::Request,
+    ) -> Result<(), crate::Error> {
+        assert!(request.is_blank(), "a request starts blank");
+
+        request.query_texts("functionKey", options.function_key);
+        request.query_text("orderBy", options.order_by);
+        request.query_number("maxResults", options.results_max);
+        request.query_number("startAt", options.start_at);
+
+        assert!(request.is_complete(), "every path parameter is filled");
+
+        Ok(())
+    }
+}
+
+impl crate::Paged for GetPrecomputations {
+    const PAGING: crate::Paging =
+        crate::Paging { cursor: "startAt", items: Some("/values"), next: crate::Next::Offset };
+
+    type Item = crate::Object<super::shape::JQLFunctionPrecomputationBean>;
+}

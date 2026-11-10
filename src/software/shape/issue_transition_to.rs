@@ -1,0 +1,19 @@
+#[derive(Clone, Copy, Debug)]
+pub struct IssueTransitionTo;
+
+impl IssueTransitionTo {
+    pub const DESCRIPTION: crate::Field<Self, crate::Text> = crate::Field::new("description");
+    pub const ICON_URL: crate::Field<Self, crate::Text> = crate::Field::new("iconUrl");
+    pub const ID: crate::Field<Self, crate::Text> = crate::Field::new("id");
+    pub const NAME: crate::Field<Self, crate::Text> = crate::Field::new("name");
+
+    pub const SCOPE: crate::Field<Self, crate::Object<super::IssueTransitionToScope>> =
+        crate::Field::new("scope");
+
+    pub const SELF: crate::Field<Self, crate::Text> = crate::Field::new("self");
+
+    pub const STATUS_CATEGORY: crate::Field<
+        Self,
+        crate::Object<super::IssueTransitionToStatusCategory>,
+    > = crate::Field::new("statusCategory");
+}

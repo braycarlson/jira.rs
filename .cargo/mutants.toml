@@ -1,0 +1,11 @@
+cap_lints = true
+exclude_globs = [
+    "src/assets/**",
+    "src/automation/**",
+    "src/bin/**",
+    "src/fuzz.rs",
+    "src/platform/**",
+    "src/service_desk/**",
+    "src/software/**",
+    "xtask/**",
+]

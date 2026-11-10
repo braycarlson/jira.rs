@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="295.91" height="246" viewBox="0 0 295.91 246" role="img" aria-label="jira.rs">
+    <title>jira.rs</title>
+    <defs>
+        <linearGradient id="jira-rs-mark-1" gradientUnits="userSpaceOnUse" x1="50.55" y1="147.6" x2="141.58" y2="231.72">
+            <stop offset="0.000" stop-color="#FEA638"/>
+            <stop offset="0.360" stop-color="#FC8933"/>
+            <stop offset="0.680" stop-color="#E9612F"/>
+            <stop offset="1.000" stop-color="#B8401F"/>
+        </linearGradient>
+        <linearGradient id="jira-rs-mark-2" gradientUnits="userSpaceOnUse" x1="184.19" y1="23.16" x2="301.03" y2="170.04">
+            <stop offset="0.000" stop-color="#49E1F9"/>
+            <stop offset="0.240" stop-color="#29BDFB"/>
+            <stop offset="0.540" stop-color="#0E82FE"/>
+            <stop offset="0.800" stop-color="#0B54F7"/>
+            <stop offset="1.000" stop-color="#1E6EFB"/>
+        </linearGradient>
+    </defs>
+    <path fill="url(#jira-rs-mark-1)" d="M15.12 243 A12.12 12.12 0 0 1 4.62 224.81 L32.12 177.19 A36.37 36.37 0 0 1 63.62 159 L146.62 159 A19.21 19.21 0 0 0 165.26 144.45 L213.71 144.45 L140.62 243 Z"/>
+    <path fill="url(#jira-rs-mark-2)" d="M195.53 23.37 A26.9 26.9 0 0 1 221.62 3 L276.51 3 A16.4 16.4 0 0 1 292.42 23.37 L257.16 164.42 A103.74 103.74 0 0 1 156.51 243 L86.62 243 A69.16 69.16 0 0 0 153.72 190.61 Z"/>
+</svg>

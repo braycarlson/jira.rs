@@ -1,0 +1,7 @@
+#[derive(Clone, Copy, Debug)]
+pub struct GroupBean;
+
+impl GroupBean {
+    pub const NAME: crate::Field<Self, crate::Text> = crate::Field::new("name");
+    pub const SELF: crate::Field<Self, crate::Text> = crate::Field::new("self");
+}
